@@ -1,3 +1,16 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Card
+
+
+class CardAdmin(admin.ModelAdmin):
+    list_display = (
+        'pk',
+        'owner',
+        'card_number',
+        'balance',
+    )
+    search_fields = ('owner',)
+
+
+admin.site.register(Card, CardAdmin)

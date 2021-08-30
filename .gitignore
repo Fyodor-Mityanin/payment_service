@@ -1,1 +1,7 @@
 venv_payment_service/
+.vscode/
+.env
+.commands
+__pycache__/
+db.sqlite3
+migrations/

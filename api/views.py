@@ -95,7 +95,7 @@ class CardDetailDestroyAPI(views.APIView):
 
 class InvoiceListCreateAPI(views.APIView):
     def get(self, request):
-        invoice = request.user.received_invoices.all()
+        invoice = request.user.received_invoices.filter(is_paid=False)
         serializer = InvoiceSerializer(invoice, many=True)
         return Response(serializer.data)
 

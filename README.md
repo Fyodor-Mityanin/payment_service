@@ -52,7 +52,7 @@ python manage.py createsuperuser
 
 ## Project avalible at
 
-[Redoc](http://130.193.52.84/redoc/) - This is redoc page, you can read about YaMDB_API
+[documenter.getpostman](https://documenter.getpostman.com/view/13009350/U16bx9Mu) - This is documentation page
 [Admin](http://localhost:8000/admin/) - This is admin login page
 [API](http://localhost:8000/api/v1/auth/users/) - You can create regular user and check API
 

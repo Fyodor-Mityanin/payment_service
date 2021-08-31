@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Card, User2CardTransaction, Invoice, Card2CardTransaction
+from .models import Card, Card2CardTransaction, Invoice, User2CardTransaction
 
 
 class CardAdmin(admin.ModelAdmin):
@@ -33,6 +33,7 @@ class InvoiceAdmin(admin.ModelAdmin):
         'is_paid',
     )
 
+
 class Card2CardTransactionAdmin(admin.ModelAdmin):
     list_display = (
         'pk',
@@ -40,6 +41,7 @@ class Card2CardTransactionAdmin(admin.ModelAdmin):
         'outgoing_card',
         'amount',
         'transaction_date',
+        'email',
     )
 
 

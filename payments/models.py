@@ -1,7 +1,7 @@
-from django.db import models
 from django.contrib.auth import get_user_model
 from django.core.validators import MinLengthValidator
-from django.utils.translation import gettext_lazy as _
+from django.db import models
+
 from .validators import validate_card_is_digit
 
 User = get_user_model()
@@ -44,7 +44,7 @@ class Card(models.Model):
 
     def __str__(self):
         balance = self.round_balance()
-        return f'{self.card_number}:{balance}'
+        return f'{self.card_number}'
 
     def round_balance(self):
         return round(self.balance, 2)
@@ -135,6 +135,10 @@ class Card2CardTransaction(models.Model):
         'Сумма',
         max_digits=8,
         decimal_places=2
+    )
+    email = models.EmailField(
+        'Почта',
+        blank=True,
     )
     transaction_date = models.DateTimeField(
         'Дата и время транзакции',

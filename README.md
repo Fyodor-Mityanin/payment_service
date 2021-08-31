@@ -2,6 +2,17 @@
 
 This is test API app
 
+## Oсновные модули программы
+
+Приложение состоит из двух модулей.
+
+### payments
+Это модуль со всеми моделями приложения и админкой. Никакой логики тут нет. Этот модуль вынесен отдельно с заделом, что в нём может когда-нибудь появиться веб-интерфейс.
+
+### api
+Вся логика приложения находится в этом модуле. Поддерживается версионность API. Все view-классы наследованы от низкоуровнего APIView, так как логика не стандартная и generic view-классы бы тут не подошли.
+
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.

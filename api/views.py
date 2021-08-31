@@ -1,8 +1,8 @@
 import random
 import string
 from decimal import Decimal
-from django.core.mail import send_mail
 
+from django.core.mail import send_mail
 from django.http import JsonResponse
 from rest_framework import status, views
 from rest_framework.generics import get_object_or_404

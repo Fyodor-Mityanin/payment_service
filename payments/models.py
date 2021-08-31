@@ -139,6 +139,7 @@ class Card2CardTransaction(models.Model):
     email = models.EmailField(
         'Почта',
         blank=True,
+        null=True,
     )
     transaction_date = models.DateTimeField(
         'Дата и время транзакции',
